@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .weather-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h3 {
+            margin: 10px 0;
+        }
+
+        .city-time {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .city-temp {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .local-time-label {
+            margin-right: 5px;
+        }
+
+        .local-time-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weather-container">
+        <input id="city-input" type="text" placeholder="Enter city name">
+        <button id="search-button">Search</button>
+
+        <div>
+            <h3 id="city-name">Canada, Ontario - Toronto</h3>
+            <p class="city-time">
+                <span class="local-time-label">Local Time:</span>
+                <img class="local-time-icon" src="https://img.icons8.com/ios-filled/50/000000/clock.png" alt="Clock Icon">
+                <span id="city-time">localtime</span>
+            </p>
+            <p id="city-temp" class="city-temp">13°C</p>
+        </div>
+    </div>
+    <div>
+        <h1>Getting users current location</h1>
+        <button id="get-location-button">Get your current location</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
